@@ -13,7 +13,7 @@ firstFile = True
 file = open("../" + str(count) + ".hs", "w")
 
 for line in fileLines:
-    regex = re.match("--.[^P]", line)
+    regex = re.match("--..", line)
     if "-- Problem" in line:
         count += 1
         if firstFile:
