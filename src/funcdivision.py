@@ -10,7 +10,7 @@ fileLines = illTyped.readlines()
 count = 1
 firstFile = True
 
-file = open(str(count) + ".hs", "w")
+file = open("../" + str(count) + ".hs", "w")
 
 for line in fileLines:
     regex = re.match("--.[^P]", line)
@@ -21,7 +21,7 @@ for line in fileLines:
         else:
             file.writelines(main)
             file.close()
-            file = open(str(count) + ".hs", "w")
+            file = open("../" + str(count) + ".hs", "w")
         file.writelines(boilerplate)
         file.write(line)
     elif regex == None and line != "\n":
